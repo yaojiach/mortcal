@@ -1,6 +1,6 @@
 {
   "name": "mortcal",
-  "version": "0.1.6",
+  "version": "1.0.0",
   "description": "Another mortgage calculator.",
   "type": "module",
   "main": "./lib/index.js",
