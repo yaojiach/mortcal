@@ -1,0 +1,28 @@
+{
+  "name": "mortcal",
+  "version": "0.1.6",
+  "description": "Another mortgage calculator.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "Mortgage",
+    "Calculator"
+  ],
+  "author": "Jiachen Yao",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.3",
+    "jest": "^26.1.0",
+    "ts-jest": "^26.1.1",
+    "typescript": "^3.9.6"
+  },
+  "files": [
+    "lib/"
+  ]
+}
