@@ -1,3 +1,12 @@
+interface IMortgageParameters {
+  rate: number
+  loan: number
+  term: number
+  interestOnly?: boolean
+  points?: number
+  otherFees?: number
+}
+
 export class Mortgage {
   rate: number
   loan: number
@@ -7,14 +16,14 @@ export class Mortgage {
   pointsAmount: number
   otherFees: number
 
-  constructor(
-    rate: number,
-    loan: number,
-    term: number,
+  constructor({
+    rate,
+    loan,
+    term,
     interestOnly = false,
     points = 0.0,
     otherFees = 0.0
-  ) {
+  }: IMortgageParameters) {
     this.rate = rate
     this.loan = loan
     this.term = term

@@ -3,7 +3,7 @@ import { Mortgage } from '../src/mortgage'
 const RATE = 0.02 // 2%
 const LOAN = 30000 // dollars
 const TERM = 36 // months
-const MORTGAGE = new Mortgage(RATE, LOAN, TERM)
+const MORTGAGE = new Mortgage({ rate: RATE, loan: LOAN, term: TERM })
 const ROUNDED_PAYMENT = 1177
 const ENDING_PERIOD = 6
 const ROUNDED_BALANCE = 26360
