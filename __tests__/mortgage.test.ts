@@ -11,26 +11,28 @@ const ROUNDED_TOTAL_PAYMENT = 7062
 const ROUNDED_CUMULATIVE_PRINCIPAL_PAYMENT = 3640
 const ROUNDED_CUMULATIVE_INTEREST_PAYMENT = 3422
 
-test(`Mortgage per period payment is ${ROUNDED_PAYMENT} rounded.`, () => {
-  expect(Math.round(MORTGAGE.getPayment)).toBe(ROUNDED_PAYMENT)
-})
+describe('Mortgage class', () => {
+  test(`per period payment is ${ROUNDED_PAYMENT} rounded.`, () => {
+    expect(Math.round(MORTGAGE.getPayment)).toBe(ROUNDED_PAYMENT)
+  })
 
-test(`Mortgage balance ending at ${ENDING_PERIOD} is ${ROUNDED_BALANCE} rounded.`, () => {
-  expect(Math.round(MORTGAGE.remainingMortgageBalance(ENDING_PERIOD))).toBe(ROUNDED_BALANCE)
-})
+  test(`balance ending at ${ENDING_PERIOD} is ${ROUNDED_BALANCE} rounded.`, () => {
+    expect(Math.round(MORTGAGE.remainingMortgageBalance(ENDING_PERIOD))).toBe(ROUNDED_BALANCE)
+  })
 
-test(`Mortgage total paid at ${ENDING_PERIOD} is ${ROUNDED_TOTAL_PAYMENT} rounded.`, () => {
-  expect(Math.round(MORTGAGE.totalPayment(ENDING_PERIOD))).toBe(ROUNDED_TOTAL_PAYMENT)
-})
+  test(`total paid at ${ENDING_PERIOD} is ${ROUNDED_TOTAL_PAYMENT} rounded.`, () => {
+    expect(Math.round(MORTGAGE.totalPayment(ENDING_PERIOD))).toBe(ROUNDED_TOTAL_PAYMENT)
+  })
 
-test(`Mortgage cumulative principal paid at ${ENDING_PERIOD} is ${ROUNDED_CUMULATIVE_PRINCIPAL_PAYMENT} rounded.`, () => {
-  expect(Math.round(MORTGAGE.cumulativePrincipalPayment(ENDING_PERIOD))).toBe(
-    ROUNDED_CUMULATIVE_PRINCIPAL_PAYMENT
-  )
-})
+  test(`cumulative principal paid at ${ENDING_PERIOD} is ${ROUNDED_CUMULATIVE_PRINCIPAL_PAYMENT} rounded.`, () => {
+    expect(Math.round(MORTGAGE.cumulativePrincipalPayment(ENDING_PERIOD))).toBe(
+      ROUNDED_CUMULATIVE_PRINCIPAL_PAYMENT
+    )
+  })
 
-test(`Mortgage cumulative principal paid at ${ENDING_PERIOD} is ${ROUNDED_CUMULATIVE_INTEREST_PAYMENT} rounded.`, () => {
-  expect(Math.round(MORTGAGE.cumulativeInterestPayment(ENDING_PERIOD))).toBe(
-    ROUNDED_CUMULATIVE_INTEREST_PAYMENT
-  )
+  test(`cumulative principal paid at ${ENDING_PERIOD} is ${ROUNDED_CUMULATIVE_INTEREST_PAYMENT} rounded.`, () => {
+    expect(Math.round(MORTGAGE.cumulativeInterestPayment(ENDING_PERIOD))).toBe(
+      ROUNDED_CUMULATIVE_INTEREST_PAYMENT
+    )
+  })
 })
