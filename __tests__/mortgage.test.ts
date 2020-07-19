@@ -1,4 +1,4 @@
-import { Mortgage } from '../src/mortgage'
+import { Mortgage } from '../src'
 
 const RATE = 0.02 // 2%
 const LOAN = 30000 // dollars

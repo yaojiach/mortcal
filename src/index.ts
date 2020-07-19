@@ -1,3 +1,3 @@
-import { Mortgage } from './mortgage.js'
+import { Mortgage } from './mortgage'
 
 export { Mortgage }
